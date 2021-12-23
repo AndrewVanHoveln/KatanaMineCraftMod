@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "wintrensmod",
+  "version": "${version}",
+
+  "name": "Wintrens Mod",
+  "description": "",
+  "authors": [
+    "Wintren"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/wintrensmod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "wintren.wintrens.mod.WintrensMod"
+    ]
+  },
+  "mixins": [
+    "wintrensmod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

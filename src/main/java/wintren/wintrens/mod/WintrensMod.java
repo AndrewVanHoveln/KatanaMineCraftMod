@@ -13,7 +13,7 @@ public class WintrensMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Item KATANA = new Item(new Item.Settings().group(ItemGroup.COMBAT));
+	public static final Item KATANA = new Katana(new Item.Settings().group(ItemGroup.COMBAT));
 	public static final Logger LOGGER = LogManager.getLogger("wintrensmod");
 
 	@Override
@@ -22,8 +22,9 @@ public class WintrensMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		Registry.register(Registry.ITEM, new Identifier("wintrensmod", "katana"), KATANA);
-
+		Registry.register(Registry.ITEM, new Identifier("wintrensmod", "katana"), new SwordBaseKatana(new ToolMaterialKatana()));
+		
+		
 		LOGGER.info("Hello Fabric world!");
 	}
 }
